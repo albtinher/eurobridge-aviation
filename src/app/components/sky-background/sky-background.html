@@ -1,0 +1,34 @@
+<!-- VIDEO BACKGROUND -->
+<div class="video-bg" aria-hidden="true">
+  <video
+    #videoA
+    class="bg-video"
+    [class.is-active]="activeVideoIndex() === 0"
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+    (timeupdate)="onTimeUpdate(0)"
+    (ended)="onVideoEnded(0)"
+  >
+    <source src="/videos/background.mp4" type="video/mp4" />
+    <source src="/videos/background.webm" type="video/webm" />
+  </video>
+
+  <video
+    #videoB
+    class="bg-video"
+    [class.is-active]="activeVideoIndex() === 1"
+    muted
+    playsinline
+    preload="auto"
+    (timeupdate)="onTimeUpdate(1)"
+    (ended)="onVideoEnded(1)"
+  >
+    <source src="/videos/background.mp4" type="video/mp4" />
+    <source src="/videos/background.webm" type="video/webm" />
+  </video>
+</div>
+
+<!-- SKY OVERLAY -->
+<div class="sky"></div>

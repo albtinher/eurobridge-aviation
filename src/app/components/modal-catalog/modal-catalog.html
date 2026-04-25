@@ -1,0 +1,231 @@
+<div class="modal-bg" [class.open]="isOpen('m-ppl')" (click)="onBackdropClick($event)">
+  <div class="modal-box">
+    <div class="modal-head"><h3 class="modal-title">Conversión PPL</h3><button class="modal-x" (click)="closeRequested.emit()">✕</button></div>
+    @if (activeModal() === 'm-ppl' && formVisible()) {
+      <div class="modal-body">
+        <app-contact-form
+          [courseName]="selectedCourse()"
+          [submitting]="sending()"
+          [errorMessage]="submitError()"
+          (submitRequested)="submitForm($event)"
+          (cancelRequested)="closeForm()"
+        />
+      </div>
+    } @else {
+      <div class="modal-body modal-body-split">
+        <div class="modal-copy">
+          <p class="modal-lead">Homologa tu licencia PPL ICAO a la normativa EASA y da el paso al entorno operativo europeo con una ruta clara.</p>
+          <ul class="modal-dot-list">
+            <li>Validación de horas de vuelo y requisitos previos</li>
+            <li>Asesoramiento sobre exámenes y documentación exigida</li>
+            <li>Gestión del expediente hasta la expedición de la licencia</li>
+          </ul>
+          <button class="btn-start modal-start" type="button" (click)="openForm()">Empezar formación</button>
+        </div>
+        <div class="modal-media">
+          <img src="/images/avion.jpg" alt="Avión en pista" />
+        </div>
+      </div>
+    }
+  </div>
+</div>
+
+<div class="modal-bg" [class.open]="isOpen('m-uprt')" (click)="onBackdropClick($event)">
+  <div class="modal-box">
+    <div class="modal-head"><h3 class="modal-title">UPRT Advance</h3><button class="modal-x" (click)="closeRequested.emit()">✕</button></div>
+    @if (activeModal() === 'm-uprt' && formVisible()) {
+      <div class="modal-body">
+        <app-contact-form
+          [courseName]="selectedCourse()"
+          [submitting]="sending()"
+          [errorMessage]="submitError()"
+          (submitRequested)="submitForm($event)"
+          (cancelRequested)="closeForm()"
+        />
+      </div>
+    } @else {
+      <div class="modal-body modal-body-split">
+        <div class="modal-copy">
+          <p class="modal-lead">Entrenamiento avanzado de prevención y recuperación de actitudes anómalas, requerido en la ruta CPL/ATPL bajo normativa EASA.</p>
+          <ul class="modal-dot-list">
+            <li>Práctica en simulador y vuelo real</li>
+            <li>Instructores certificados en maniobras de recuperación</li>
+            <li>Enfoque operativo en seguridad y toma de decisiones</li>
+          </ul>
+          <button class="btn-start modal-start" type="button" (click)="openForm()">Empezar formación</button>
+        </div>
+        <div class="modal-media">
+          <img src="/images/pilotos-2.jpg" alt="Pilotos en entrenamiento" />
+        </div>
+      </div>
+    }
+  </div>
+</div>
+
+<div class="modal-bg" [class.open]="isOpen('m-mcc')" (click)="onBackdropClick($event)">
+  <div class="modal-box">
+    <div class="modal-head"><h3 class="modal-title">MCC APS</h3><button class="modal-x" (click)="closeRequested.emit()">✕</button></div>
+    @if (activeModal() === 'm-mcc' && formVisible()) {
+      <div class="modal-body">
+        <app-contact-form
+          [courseName]="selectedCourse()"
+          [submitting]="sending()"
+          [errorMessage]="submitError()"
+          (submitRequested)="submitForm($event)"
+          (cancelRequested)="closeForm()"
+        />
+      </div>
+    } @else {
+      <div class="modal-body modal-body-split">
+        <div class="modal-copy">
+          <p class="modal-lead">Programa de cooperación multi-tripulación con estándares de aerolínea para una transición directa al entorno comercial.</p>
+          <ul class="modal-dot-list">
+            <li>Procedimientos reales de cabina con enfoque CRM</li>
+            <li>Entrenamiento en simuladores de última generación</li>
+            <li>Preparación específica para procesos de selección</li>
+          </ul>
+          <button class="btn-start modal-start" type="button" (click)="openForm()">Empezar formación</button>
+        </div>
+        <div class="modal-media">
+          <img src="/images/vista.jpg" alt="Vista aérea desde cabina" />
+        </div>
+      </div>
+    }
+  </div>
+</div>
+
+<div class="modal-bg" [class.open]="isOpen('m-me')" (click)="onBackdropClick($event)">
+  <div class="modal-box">
+    <div class="modal-head"><h3 class="modal-title">Multi-Engine</h3><button class="modal-x" (click)="closeRequested.emit()">✕</button></div>
+    @if (activeModal() === 'm-me' && formVisible()) {
+      <div class="modal-body">
+        <app-contact-form
+          [courseName]="selectedCourse()"
+          [submitting]="sending()"
+          [errorMessage]="submitError()"
+          (submitRequested)="submitForm($event)"
+          (cancelRequested)="closeForm()"
+        />
+      </div>
+    } @else {
+      <div class="modal-body modal-body-split">
+        <div class="modal-copy">
+          <p class="modal-lead">Habilitación MEP-L para operar aeronaves multimotor y ampliar tu perfil profesional en programas CPL.</p>
+          <ul class="modal-dot-list">
+            <li>Formación teórica en sistemas y performance multimotor</li>
+            <li>Entrenamiento de vuelo con instructores especializados</li>
+            <li>Base operativa para fases avanzadas de formación</li>
+          </ul>
+          <button class="btn-start modal-start" type="button" (click)="openForm()">Empezar formación</button>
+        </div>
+        <div class="modal-media">
+          <img src="/images/viaje.webp" alt="Cabina de avión en vuelo" />
+        </div>
+      </div>
+    }
+  </div>
+</div>
+
+<div class="modal-bg" [class.open]="isOpen('m-ir')" (click)="onBackdropClick($event)">
+  <div class="modal-box">
+    <div class="modal-head"><h3 class="modal-title">Instrument Rating</h3><button class="modal-x" (click)="closeRequested.emit()">✕</button></div>
+    @if (activeModal() === 'm-ir' && formVisible()) {
+      <div class="modal-body">
+        <app-contact-form
+          [courseName]="selectedCourse()"
+          [submitting]="sending()"
+          [errorMessage]="submitError()"
+          (submitRequested)="submitForm($event)"
+          (cancelRequested)="closeForm()"
+        />
+      </div>
+    } @else {
+      <div class="modal-body modal-body-split">
+        <div class="modal-copy">
+          <p class="modal-lead">Habilitación IR para operar bajo reglas IFR y en condiciones IMC, etapa clave en el camino hacia el CPL.</p>
+          <ul class="modal-dot-list">
+            <li>Entrenamiento en simulador IFR y vuelo real</li>
+            <li>Procedimientos de navegación y aproximación instrumental</li>
+            <li>Gestión de emergencias y baja visibilidad</li>
+          </ul>
+          <button class="btn-start modal-start" type="button" (click)="openForm()">Empezar formación</button>
+        </div>
+        <div class="modal-media">
+          <img src="/images/avion.jpg" alt="Avión durante aproximación" />
+        </div>
+      </div>
+    }
+  </div>
+</div>
+
+<div class="modal-bg" [class.open]="isOpen('m-visa')" (click)="onBackdropClick($event)">
+  <div class="modal-box">
+    <div class="modal-head"><h3 class="modal-title">Visa de Estudio</h3><button class="modal-x" (click)="closeRequested.emit()">✕</button></div>
+    @if (activeModal() === 'm-visa' && formVisible()) {
+      <div class="modal-body">
+        <app-contact-form
+          [courseName]="selectedCourse()"
+          [submitting]="sending()"
+          [errorMessage]="submitError()"
+          (submitRequested)="submitForm($event)"
+          (cancelRequested)="closeForm()"
+        />
+      </div>
+    } @else {
+      <div class="modal-body">
+        <p class="modal-lead">Servicio integral de tramitación de visado de estudiante en España para que inicies tu etapa académica con seguridad y sin bloqueos administrativos.</p>
+        <ul class="modal-dot-list">
+          <li>Acompañamiento completo durante todo el proceso</li>
+          <li>Revisión de requisitos y validación de documentación</li>
+          <li>Preparación de formularios, citas consulares y seguros médicos</li>
+          <li>Seguimiento para reducir retrasos e incidencias</li>
+        </ul>
+        <p class="modal-p">Nuestro objetivo es simplificar cada fase para que tu llegada a España sea ágil, clara y organizada, permitiéndote enfocarte en tu futuro académico.</p>
+        <button class="btn-start modal-start" type="button" (click)="openForm()">Empezar formación</button>
+      </div>
+    }
+  </div>
+</div>
+
+<div class="modal-bg" [class.open]="isOpen('m-lic')" (click)="onBackdropClick($event)">
+  <div class="modal-box">
+    <div class="modal-head"><h3 class="modal-title">Tramitación de Licencia</h3><button class="modal-x" (click)="closeRequested.emit()">✕</button></div>
+    @if (activeModal() === 'm-lic' && formVisible()) {
+      <div class="modal-body">
+        <app-contact-form
+          [courseName]="selectedCourse()"
+          [submitting]="sending()"
+          [errorMessage]="submitError()"
+          (submitRequested)="submitForm($event)"
+          (cancelRequested)="closeForm()"
+        />
+      </div>
+    } @else {
+      <div class="modal-body">
+        <p class="modal-lead">Gestión administrativa integral orientada a la obtención de la licencia de piloto comercial al finalizar el programa formativo.</p>
+        <ul class="modal-dot-list">
+          <li>Verificación y validación de documentación académica y operativa</li>
+          <li>Preparación del expediente según estándares regulatorios vigentes</li>
+          <li>Presentación ante la autoridad aeronáutica competente</li>
+          <li>Seguimiento del proceso hasta emisión de licencia</li>
+        </ul>
+        <p class="modal-p">Trabajamos con rigor, trazabilidad y cumplimiento normativo para asegurar una transición eficiente entre tu formación y tu habilitación profesional.</p>
+        <button class="btn-start modal-start" type="button" (click)="openForm()">Empezar formación</button>
+      </div>
+    }
+  </div>
+</div>
+
+<div class="modal-bg" [class.open]="confirmationVisible()" (click)="onConfirmationBackdropClick($event)">
+  <div class="modal-box contact-confirm-box">
+    <div class="modal-head contact-confirm-head">
+      <h3 class="modal-title contact-confirm-title">Consulta enviada</h3>
+      <button class="modal-x" type="button" aria-label="Cerrar" (click)="closeConfirmationAndModal()">✕</button>
+    </div>
+    <div class="modal-body contact-confirm-body">
+      <p class="contact-confirm-lead">Gracias por tu interés en <strong>{{ selectedCourse() }}</strong>.</p>
+      <p class="modal-p">Recibimos tu solicitud correctamente. Nuestro equipo te contactará por correo con los siguientes pasos en breve.</p>
+      <button class="btn-start contact-confirm-action" type="button" (click)="closeConfirmationAndModal()">Perfecto</button>
+    </div>
+  </div>
+</div>

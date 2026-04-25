@@ -1,0 +1,59 @@
+<div class="modal-bg cpl-modal-bg" [class.open]="isOpen()" (click)="onBackdropClick($event)">
+  <div class="card cpl-modal-card">
+    <button class="modal-x cpl-modal-x" type="button" aria-label="Cerrar" (click)="closeRequested.emit()">✕</button>
+    <div class="cpl-grid">
+      <div class="cpl-left">
+        <h2 class="cpl-title">Conversión CPL</h2>
+        <p class="cpl-intro">Da el salto a la aviación profesional en Europa con nuestro programa diseñado para pilotos internacionales. Convertimos tu experiencia en una licencia CPL, lista para volar en aerolíneas.</p>
+        <p class="label-sm">Este programa está diseñado para:</p>
+        <ul class="dot-list">
+          <li>Pilotos con licencia PPL ICAO (Latinoamérica u otros países)</li>
+          <li>Alumnos que desean trabajar como piloto en Europa</li>
+          <li>Pilotos que buscan obtener una licencia válida internacionalmente</li>
+        </ul>
+        <p class="cpl-body-text">Ofrecemos un programa completo, adaptado a pilotos internacionales, optimizando horas para menor coste. Una formación modular o integrada, con asesoramiento individual. Nos encargamos de formalizar y tramitar toda la documentación necesaria para tu licencia.</p>
+      </div>
+      <div class="cpl-right">
+        @if (formVisible()) {
+          <app-contact-form
+            [courseName]="'Conversion CPL'"
+            [submitting]="sending()"
+            [errorMessage]="submitError()"
+            (submitRequested)="submitForm($event)"
+            (cancelRequested)="closeForm()"
+          />
+        } @else {
+          <div class="cockpit-frame">
+            <img src="/images/pilotos.jpeg" alt="Pilotos en formación" />
+          </div>
+          <div>
+            <p class="label-sm">Requisitos</p>
+            <ul class="dot-list">
+              <li>Edad mínima: 21 años</li>
+              <li>Licencia PPL válida (OACI)</li>
+              <li>Certificado médico: Clase 1 EASA en vigor</li>
+              <li>Idioma: Inglés mínimo ICAO Nivel 4</li>
+              <li>Formación teórica: ATPL teórico</li>
+              <li>Experiencia: 150-200 horas de vuelo totales</li>
+            </ul>
+            <button class="btn-start" type="button" (click)="openForm()">Empieza tu formación</button>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg cpl-confirm-bg" [class.open]="confirmationVisible()" (click)="onConfirmationBackdropClick($event)">
+  <div class="modal-box contact-confirm-box cpl-confirm-box">
+    <div class="modal-head contact-confirm-head">
+      <h3 class="modal-title contact-confirm-title">Consulta enviada</h3>
+      <button class="modal-x" type="button" aria-label="Cerrar" (click)="closeConfirmationAndModal()">✕</button>
+    </div>
+    <div class="modal-body contact-confirm-body">
+      <p class="contact-confirm-lead">Gracias por tu interés en <strong>Conversión CPL</strong>.</p>
+      <p class="modal-p">Recibimos tu solicitud correctamente. Nuestro equipo te contactará por correo con los siguientes pasos en breve.</p>
+      <button class="btn-start contact-confirm-action" type="button" (click)="closeConfirmationAndModal()">Perfecto</button>
+    </div>
+  </div>
+</div>
