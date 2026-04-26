@@ -698,6 +698,58 @@ nav.scrolled .nav-logo-img {
   color: var(--ink-mid);
   line-height: 1.4;
 }
+
+.phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--ink-mid);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.phone-link + .phone-link {
+  margin-top: 0.28rem;
+}
+
+.phone-link-icon {
+  font-size: 0.76em;
+  line-height: 1;
+  color: rgba(200, 168, 75, 0.92);
+}
+
+.phone-link-hint {
+  font-size: 0.58em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-ghost);
+  transform: translateY(1px);
+}
+
+.phone-link-number {
+  text-decoration: underline;
+  text-decoration-thickness: 0.09em;
+  text-underline-offset: 0.16em;
+  text-decoration-color: currentColor;
+}
+
+.phone-link:hover,
+.phone-link:focus-visible {
+  color: #1a1814;
+  transform: translateX(1px);
+}
+
+.phone-link:hover .phone-link-number,
+.phone-link:focus-visible .phone-link-number {
+  text-decoration-color: rgba(200, 168, 75, 0.95);
+}
+
+.phone-link:focus-visible {
+  outline: 2px solid rgba(200, 168, 75, 0.75);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
 .pilot-frame {
   width: 100%;
   max-width: 460px;
