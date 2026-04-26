@@ -702,7 +702,7 @@ nav.scrolled .nav-logo-img {
 .phone-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.34rem;
   color: var(--ink-mid);
   font-weight: 700;
   text-decoration: none;
@@ -711,12 +711,6 @@ nav.scrolled .nav-logo-img {
 
 .phone-link + .phone-link {
   margin-top: 0.28rem;
-}
-
-.phone-link-icon {
-  font-size: 0.76em;
-  line-height: 1;
-  color: rgba(200, 168, 75, 0.92);
 }
 
 .phone-link-hint {
