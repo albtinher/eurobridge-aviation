@@ -1108,9 +1108,13 @@ footer {
   .cpl-grid { grid-template-columns: 1fr; }
   .cpl-left { border-right: none; border-bottom: 1px solid rgba(26,24,20,0.09); padding: 2.5rem 2rem; }
   .cpl-right { padding: 2.5rem 2rem; }
+  #contacto.card {
+    grid-template-rows: auto 1fr;
+    min-height: auto;
+  }
   .contacto-grid { grid-template-columns: 1fr; }
-  .contacto-hero { min-height: 180px; height: 42%; }
-  .contacto-logo-img { width: min(54vw, 300px); }
+  .contacto-hero { min-height: 0; height: auto; padding: 0.5rem 1rem 0.9rem; }
+  .contacto-logo-img { width: min(46vw, 240px); }
   .contacto-panel { border-radius: 24px; }
   .contacto-left { border-right: none; border-bottom: 1px solid rgba(26,24,20,0.09); padding: 2rem 1.7rem; }
   .contacto-right { padding: 1.6rem 1.7rem 1.9rem; }
@@ -1152,12 +1156,17 @@ footer {
   }
 
   #contacto.card {
-    min-height: 86vh;
+    min-height: auto;
     background: transparent;
   }
 
   .contacto-hero {
-    padding: 1.5rem 1.2rem 2.5rem;
+    min-height: 0;
+    padding: 0.3rem 0.9rem 0.7rem;
+  }
+
+  .contacto-logo-img {
+    width: min(38vw, 142px);
   }
 
   #contacto .contacto-grid {
